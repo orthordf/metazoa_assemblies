@@ -74,19 +74,3 @@ print("Assembler: " + assembly_info)
 print("Genome coverage: " + genome_info)
 print("Sequencing technology: " + sequencing_info)
 print("Submitter: " + submitter_info)
-
-fields = ['Accession', 'Assembler', 'Genome coverage', 'Sequencing technology', 'Submitter']
-rows = [accession, assembly_info, genome_info, sequencing_info, submitter_info]
-mydict =[{'Accession': accession, 'Assembler': assembly_info, 'Genome coverage': genome_info, 'Sequencing technology': sequencing_info,'Submitter': submitter_info}]
-filename = "assembly_info.csv"
-
-# writing to csv file  
-with open(filename, 'a') as csvfile:  
-    # creating a csv dict writer object  
-    writer = csv.DictWriter(csvfile, fieldnames = fields)  
-        
-    # writing headers (field names)  
-    # writer.writeheader()  
-        
-    # writing data rows  
-    writer.writerows(mydict)
