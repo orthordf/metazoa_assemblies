@@ -4,17 +4,12 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 
-# accession number fed as the first argument
 accession = sys.argv[1]
 
-# URL, the unique thing among genomes is the GCA_*** part
 URL = 'https://www.ncbi.nlm.nih.gov/assembly/' + accession
 page = requests.get(URL)
 
-# Parse the contents of the URL with Beautiful Soup
 soup = BeautifulSoup(page.content, 'html.parser')
-
-# Assign the "summary_cont" div to summary_continued variable
 summary_continued = soup.find(id="summary_cont")
 
 # Make the summary easier to read
