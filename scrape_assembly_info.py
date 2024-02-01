@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-
-# The variables that we want to parse are:
-# Assembly method, Genome coverage, and Sequencing technology, and Submitter
-# Written by Ashlyn Powell and Paul Frandsen
 import sys
 import csv
 import requests
