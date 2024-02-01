@@ -8,6 +8,7 @@ accession = sys.argv[1]
 
 URL = 'https://www.ncbi.nlm.nih.gov/assembly/' + accession
 page = requests.get(URL)
+# print(page.content.decode())
 
 soup = BeautifulSoup(page.content, 'html.parser')
 summary_continued = soup.find(id="summary_cont")
