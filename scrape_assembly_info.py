@@ -65,8 +65,9 @@ if submitter_index != False:
 else:
     submitter_info = "N/A"
 
-print("Accession: " + accession)
-print("Assembler: " + assembly_info)
-print("Genome coverage: " + genome_info)
-print("Sequencing technology: " + sequencing_info)
-print("Submitter: " + submitter_info)
+# Print tsv
+fields = ['Accession', 'Assembler', 'Genome coverage', 'Sequencing technology', 'Submitter']
+rows = [accession, assembly_info, genome_info, sequencing_info, submitter_info]
+
+print("\t".join(fields), file=sys.stderr)
+print("\t".join(rows))
